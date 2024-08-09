@@ -23,7 +23,9 @@ This article describes how to customize and interact with the map using buttons 
 
 ## Gestures
 
-Gestures are important part of the map navigation.
+Gestures are important part of the map navigation.  
+
+Slide animations could be disabled with special [setting](#disable-all-animations).
 
 | Map Action | Gesture |
 |:------------|:---------------|
@@ -34,10 +36,8 @@ Gestures are important part of the map navigation.
 |**Rotate**| Tap with **two** fingers on the map and rotate. |
 |**Tilt** - 3D | Tap with **two** fingers on the map and then move them up/down  <br /> This option is only available with [map rendering engine](../personal/global-settings.md#map-rendering-engine) version 2 (OpenGL).  |
 
-Slide animations could be disabled with special [setting](#disable-all-animations).
 
-
-## My Location & Zoom
+## My Location and Zoom
 
 ![Configure screen menu](@site/static/img/widgets/location_zoom_buttons.png)
 
@@ -59,19 +59,19 @@ Keep in mind that during navigation zoom can be controlled by **Auto zoom settin
 
 **<Translate ios="true" ids="ios_button_seq"/>:** <Translate ios="true" ids="shared_string_menu,shared_string_settings,application_profiles,routing_settings_2,map_during_navigation,auto_zoom_map"/>  
 
-### My location appearance
+### My Location Appearance
+
+All the information can be found in the [Profiles (Settings)](../personal/profiles.md) article.
 
 
-## Map magnifier
+## Map Magnifier
 
 Map magnifier is a special way to magnify the map. Essentially it works as a magnifying glass for paper maps, it allows to see the text bigger for raster maps or to see more or less details for the same scale - [Read more](../map/vector-maps.md#map-magnifier).
 
 
-## Map orientation and Compass
+## Map Orientation and Compass
 
-### Map orientation modes
-
-The map orientation modes allow the user to select how the map is displayed on the device screen. Enabling each mode changes the way the map is oriented according to the selected option.  
+### Map Orientation Modes
 
 <Tabs groupId="operating-systems">
 
@@ -93,23 +93,29 @@ The map orientation modes allow the user to select how the map is displayed on t
 
 </Tabs>  
 
+The map orientation modes allow the user to select how the map is displayed on the device screen. Enabling each mode changes the way the map is oriented according to the selected option.  
 
 - **<Translate android="true" ids="rotate_map_north_opt"/>**. The map is fixed in the direction of the North, which is the top edge of your device. The map does not have automatic rotation. 
    - for **Android** version it has hard lock the North mode (without manual rotation with twor-finger touch & rotate). 
    - for **iOS** version you can rotate it manually with a [two-pointer gesture (two-finger touch & rotate)](../map/interact-with-map.md#gestures), and in this case, the map orientation mode will change to *Manually rotated*. 
+
 - **<Translate android="true" ids="rotate_map_bearing_opt"/>**. The map rotates relative to the direction of your movement known from GPS data. For details, go to [*Rotate map by bearing*](../map/interact-with-map#rotate-map-by-bearing).
+
 - **<Translate android="true" ids="rotate_map_compass_opt"/>**. The [icon on the button](../widgets/map-buttons.md/#compass) points to the actual North, and the map moves according to the compass orientation of your device. Your device should be in as horizontal a position as possible. If your device does not have a compass sensor, the orientation of the map remains unchanged.
+
 - **<Translate android="true" ids="rotate_map_manual_opt"/>**. When you select this option, the map is fixed in the current position and does not rotate automatically. You can manually change the map orientation with a two-pointer gesture (two-finger touch & rotate).   
 
 
-**Note:**  
+**Settings:**  
 
 - Map Orientation modes can be opened in the [Profile settings](../personal/profiles.md#appearance) as well as by long-tapping the [Compass button](../widgets/map-buttons.md#compass).  
 - To quickly switch between map orientation modes:
-   - for **Android** version.  
-   **Double tap** the [Compass button](../widgets/map-buttons.md#compass) located in the upper left corner of the screen, if [visible](../widgets/map-buttons.md#display-options).
-   - for **iOS** version.  
-   **Single tap** the [Compass button](../widgets/map-buttons.md#compass) located in the upper left corner of the screen, if [visible](../widgets/map-buttons.md#display-options).
+   - For **Android** version:    
+   ***Double tap*** the [Compass button](../widgets/map-buttons.md#compass) located in the upper left corner of the screen, if [visible](../widgets/map-buttons.md#display-options).
+
+   - For **iOS** version:    
+   ***Single tap*** the [Compass button](../widgets/map-buttons.md#compass) located in the upper left corner of the screen, if [visible](../widgets/map-buttons.md#display-options).
+
 - (*Android only*) A single tap the [Compass button](../widgets/map-buttons.md#compass) rotates the map orientation to the North in all orientations. Even if it reverts back after a second, such as in compass mode.
 
 
@@ -138,15 +144,14 @@ The map orientation modes allow the user to select how the map is displayed on t
 The compass button shows how the [map is oriented](#map-orientation-modes). The red arrow, or the direction of the arrow in *Movement direction* mode, indicates the North. [The icon on the button](../widgets/map-buttons.md#compass) indicates the current map orientation mode. Double tap (Android), One tap (iOS) the compass button toggles through all modes in turn.
 
 
-### Rotate map by bearing
+### Rotate Map by Bearing
 
 If rotate map by bearing (rotation by [movement direction](#map-orientation-modes)) is enabled, the map will be oriented so that the forward view will be strictly above the icon of my location on the map. Without movement, the map won't be rotated.  
 In this mode, the center of the map will be located slightly below the center of the device. It allows you to see more map data before you move, which is useful in the navigation mode.  
 Rotate map by bearing mode can be changed in [Profile settings](../personal/profiles.md#appearance) or by single tap the [Compass](#compass).  
 
-### Map Tilt and Horizon
 
-With new map [rendering engine](../personal/global-settings.md#map-rendering-engine) you can change [camera tilt](../plugins/development.md#camera-tilt) from 90 (no tilt) to 10 degrees. Approximately at map tilt less than 20-22 degrees (this parameter depends on zoom level), the imaginary horizon line becomes visible. Unlike the real one, the program horizon is always straight.  
+### Map Tilt and Horizon
 
 <Tabs groupId="operating-systems">
 
@@ -163,6 +168,8 @@ With new map [rendering engine](../personal/global-settings.md#map-rendering-eng
 
 </Tabs>  
 
+With new map [rendering engine](../personal/global-settings.md#map-rendering-engine) you can change [camera tilt](../plugins/development.md#camera-tilt) from 90 (no tilt) to 10 degrees. Approximately at map tilt less than 20-22 degrees (this parameter depends on zoom level), the imaginary horizon line becomes visible. Unlike the real one, the program horizon is always straight.  
+
 Under horizon you can see so-called *haze* or *fog*. This area of the map is filled with grey color, only few map details can be observed.  
 The use of fog is necessary, since the display of remote objects on the map requires significant computing resources and is not always justified due to map [distortions](../plugins/development.md#comparison-with-a-satellite-imagery) at small viewing angles. So the visible distance on OsmAnd map is currently limited to 35 tiles.  
 
@@ -175,7 +182,7 @@ You can not change Camera tilt when old [map rendering engine](../personal/globa
 ## Settings
 
 
-### External input device buttons
+### External Input Device Buttons
 
 External input device buttons provide a convenient and efficient way to interact with the map and the OsmAnd application interface.  They are located on external devices, such as **Bluetooth or other types of keyboards**, **specialized buttons on vehicle navigation devices**, or [WunderLINQ](https://blackboxembedded.com/) and [Parrot](https://www.parrot.com/en) controllers.   
 
@@ -185,7 +192,7 @@ One of the main functions of buttons on external input devices is to zoom in and
 The keyboard continues to work even if the *External input devices* option is turned off, when *None* is selected. 
 :::
 
-#### Setup of External Input Devices
+### Setup of External Input Devices
 
 <Tabs groupId="operating-systems">
 
@@ -273,7 +280,9 @@ Creates a smooth map panning effect versus the *[My Position](../personal/profil
 
 ![External devices](@site/static/img/map/external_mypilot_android.png)  ![External devices](@site/static/img/map/external_mypilot2_android.png)
 
-#### Create New Type  
+You can customize the control of the OsmAnd application using external keyboards or other input devices. This feature allows you to bind frequently performed actions to specific keys or switch settings without having to interact with the screen, which speeds up interaction with the application. 
+
+### Create New Type  
 
 You can create your custom type with a set of actions for the keys of an external input device (such as a keyboard, joystick, or controller). 
 
@@ -284,7 +293,7 @@ You can create your custom type with a set of actions for the keys of an externa
 - Each new type has a three-dot menu next to it that includes actions such as:  
     ***Rename, Duplicate***, and ***Remove***.
 
-#### Add New Key Asssigment
+### Add New Key Assignment
 
 ![External devices](@site/static/img/map/external_custom_4_andr.png)  ![External devices](@site/static/img/map/external_custom_3_andr.png)
 
@@ -298,7 +307,7 @@ After you have created your custom type for the keys, you can assign the require
 If the button you assign is already being used for another action, you will receive a notification with the option to reassign the button or cancel the assignment. 
 :::
 
-#### Delete Actions
+### Delete Actions
 
 ![External devices](@site/static/img/map/external_custom_1_andr.png)
 
@@ -306,7 +315,7 @@ A list of actions for *Keyboard* will open by default. You can delete unnecessar
 - ***Remove one action*** per action, with the&nbsp;  "**−**"  &nbsp;button in the item field.
 - ***Remove all key assignments*** for the selected type by tapping the button in the upper right corner of the screen next to the *Edit name*.      
 
-#### Edit Existing Actions
+### Edit Existing Actions
 
 ![External devices](@site/static/img/map/external_custom_2_andr.png)  
 

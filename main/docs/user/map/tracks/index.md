@@ -115,13 +115,45 @@ You can choose which tracks to show on the map and which to hide. You can do thi
 -->
 
 
-### Track appearance
+### Track Appearance
 
-Link
+<Tabs groupId="operating-systems">
 
-### Track context menu
+<TabItem value="android" label="Android">  
 
-Link
+![Track menu Appearance Android](@site/static/img/map/track_appearence_1_andr.png)  
+
+</TabItem>
+
+<TabItem value="ios" label="iOS">
+
+![Track menu iOS](@site/static/img/map/track_appearence_1_ios.png) 
+
+</TabItem>
+
+</Tabs> 
+
+In the OsmAnd application, you can apply some settings by changing the appearance of the tracks. All the information can be found in the [Track appearance](../../map/tracks/appearance.md) article.
+
+### Track Context Menu
+
+<Tabs groupId="operating-systems">
+
+<TabItem value="android" label="Android">  
+
+![Track menu Appearance Android](@site/static/img/map/track_cont_menu_andr.png)  
+
+</TabItem>
+
+<TabItem value="ios" label="iOS">
+
+![Track menu iOS](@site/static/img/map/track_cont_menu_ios.png) 
+
+</TabItem>
+
+</Tabs> 
+
+The track context menu provides track information in text and graphical form. It allows you to add and edit information and make other changes to the track. All the information can be found in the [Track Context Menu](../..//map/tracks/track-context-menu.md) article.
 
 
 ### Analyze Track on Map  
